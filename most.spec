@@ -1,12 +1,12 @@
 Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
-Version:	4.9.4
-Release:	2
+Version:	4.9.5
+Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
-# Source0-md5:	97b32c74dd32ee259b2b4abb540d32b2
+# Source0-md5:	22e25b5351ce53524faa57745dd8a58c
 URL:		http://www.jedsoft.org/most/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -33,7 +33,8 @@ cp -f autoconf/aclocal.m4 acinclude.m4
 %configure \
 	--disable-warnings
 
-%{__make} SYS_INITFILE=%{_sysconfdir}/most.conf
+%{__make} \
+	SYS_INITFILE=%{_sysconfdir}/most.conf
 
 %install
 rm -rf $RPM_BUILD_ROOT
