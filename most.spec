@@ -1,14 +1,17 @@
 Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
-Version:	4.9.0
-Release:	4
+Version:	4.9.2
+Release:	1
 License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(pl):	Aplikacje/Tekst
-Source0:	ftp://space.mit.edu/pub/davis/most/test/%{name}-%{version}.tar.gz
+Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.gz
+Patch0:		%{name}-ac_fixes.patch
 URL:		http://space.mit.edu/~davis/most.html
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	slang-devel >= 1.3.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,9 +26,14 @@ dekompresj±c tak¿e pliki przed rzpoczêciem przegl±dania.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%configure
+aclocal
+autoconf
+automake -a -c || :
+%configure \
+	--disable-warnings
 
 %{__make} SYS_INITFILE=/etc/most.conf
 
