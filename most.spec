@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %attr(644, root, root) %doc README *.rc *.doc *.txt
 %attr(755, root, root) /usr/bin/most
-%attr(644, root, man)  %{_mandir}/man1/most.1
+%{_mandir}/man1/most.1
 
 %changelog
 * Fri Aug 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
