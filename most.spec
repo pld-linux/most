@@ -52,9 +52,3 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/most.conf
 %attr(755,root,root) %{_bindir}/most
 %{_mandir}/man1/*
-
-%changelog
-* Fri Jun 25 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [4.9.0-2]
-- based on RH spec,
-- spec rewrited by PLD team.
