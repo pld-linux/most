@@ -27,13 +27,13 @@ przed rzpoczêciem przegl±dania.
 LDFLAGS="-s"; export LDFLAGS
 %configure
 
-make SYS_INITFILE=/etc/most.conf
+%{__make} SYS_INITFILE=/etc/most.conf
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{/etc,%{_bindir},%{_mandir}/man1,%{_datadir}/%{name}}
 
-make install \
+%{__make} install \
 	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 	DOC_DIR=$RPM_BUILD_ROOT%{_defaultdocdir}/%{name}-%{version}
