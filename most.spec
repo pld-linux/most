@@ -16,7 +16,7 @@ Most is a pager (like less & more). Allows, amongst other, the viewing of
 multiple files and on-the-fly uncompressing.
 
 %description -l pl
-Most jest pagerr'em (jak less czy more). Umo¿liwia tak jak inne programy
+Most jest pager'em (jak less czy more). Umo¿liwia tak jak inne programy
 tego typu przegl±danie wielu plików jednocze¶nie i dekompresj±c tak¿e pliki
 przed rzpoczêciem przegl±dania.
 
