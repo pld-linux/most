@@ -2,7 +2,7 @@ Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
 Version:	4.9.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
@@ -25,7 +25,10 @@ dekompresj±c tak¿e pliki przed rzpoczêciem przegl±dania.
 %prep
 %setup -q
 
+%{__perl} -pi -e 's@/usr/lib@/usr/%{_lib}@' autoconf/aclocal.m4
+
 %build
+cp -f /usr/share/automake/config.* autoconf
 cp -f autoconf/configure.in .
 cp -f autoconf/aclocal.m4 acinclude.m4
 %{__aclocal}
