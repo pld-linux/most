@@ -5,9 +5,6 @@ Version:	4.9.2
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac_fixes.patch
 URL:		http://space.mit.edu/~davis/most.html
