@@ -32,7 +32,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
 make install	BIN_DIR=$RPM_BUILD_ROOT/usr/bin \
-		MAN_DIR=$RPM_BUILD_ROOT/usr/man/man1
+		MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %attr(644, root, root) %doc README *.rc *.doc *.txt
 %attr(755, root, root) /usr/bin/most
-%attr(644, root, man)  /usr/man/man1/most.1
+%attr(644, root, man)  %{_mandir}/man1/most.1
 
 %changelog
 * Fri Aug 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
