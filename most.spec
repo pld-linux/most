@@ -2,12 +2,12 @@ Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
 Version:	4.9.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
 # Source0-md5:	97b32c74dd32ee259b2b4abb540d32b2
-URL:		http://space.mit.edu/~davis/most.html
+URL:		http://www.jedsoft.org/most/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	slang-devel >= 1.3.6
