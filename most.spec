@@ -8,7 +8,7 @@ Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
 Source:		ftp://space.mit.edu/pub/davis/most/test/%{name}-%{version}.tar.gz
 URL:		http://space.mit.edu/~davis/most.html
-BuildPrereq:	slang-devel >= 1.3.6
+BuildRequires:	slang-devel >= 1.3.6
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
