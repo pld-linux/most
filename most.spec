@@ -9,7 +9,7 @@ Group(pl):	Narzêdzia/Tekst
 Source:		ftp://space.mit.edu/pub/davis/most/test/%{name}-%{version}.tar.gz
 URL:		http://space.mit.edu/~davis/most.html
 BuildRequires:	slang-devel >= 1.3.6
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Most is a pager (like less & more). Allows, amongst other, the viewing of 
