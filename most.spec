@@ -27,9 +27,10 @@ dekompresj±c tak¿e pliki przed rzpoczêciem przegl±dania.
 %patch0 -p1
 
 %build
-aclocal
+rm -f missing
+%{__aclocal}
 %{__autoconf}
-automake -a -c || :
+%{__automake}
 %configure \
 	--disable-warnings
 
@@ -46,14 +47,12 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1,%{_datadir}
 
 install lesskeys.rc $RPM_BUILD_ROOT%{_sysconfdir}/most.conf
 
-gzip -9nf README *.rc *.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *gz
+%doc README *.rc *.txt
 %config %{_sysconfdir}/most.conf
 %attr(755,root,root) %{_bindir}/most
 %{_mandir}/man1/*
