@@ -1,14 +1,14 @@
 Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
-Version:	4.9.5
-Release:	3
+Version:	4.10.1
+Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
-# Source0-md5:	22e25b5351ce53524faa57745dd8a58c
+# Source0-md5:	9f12a81536b8a8a59e61b6df09cd5dfd
 URL:		http://www.jedsoft.org/most/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	slang-devel >= 1.3.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,7 +29,7 @@ dekompresuj±c tak¿e pliki przed rozpoczêciem przegl±dania.
 
 %build
 cp -f /usr/share/automake/config.* autoconf
-cp -f autoconf/configure.in .
+cp -f autoconf/configure.ac .
 cp -f autoconf/aclocal.m4 acinclude.m4
 %{__aclocal}
 %{__autoconf}
