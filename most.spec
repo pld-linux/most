@@ -1,12 +1,11 @@
 Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
-Version:	4.9.2
+Version:	4.9.4
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.gz
-Patch0:		%{name}-ac_fixes.patch
+Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
 URL:		http://space.mit.edu/~davis/most.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -24,13 +23,12 @@ dekompresj±c tak¿e pliki przed rzpoczêciem przegl±dania.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-rm -f missing
+cp -f autoconf/configure.in .
+cp -f autoconf/aclocal.m4 acinclude.m4
 %{__aclocal}
 %{__autoconf}
-%{__automake}
 %configure \
 	--disable-warnings
 
