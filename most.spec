@@ -33,7 +33,7 @@ automake -a -c || :
 %configure \
 	--disable-warnings
 
-%{__make} SYS_INITFILE=/etc/most.conf
+%{__make} SYS_INITFILE=%{_sysconfdir}/most.conf
 
 %install
 rm -rf $RPM_BUILD_ROOT
