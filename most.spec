@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
   [4.8-1]
 - removed macro %version,
 - removed "Requires: slang",
-- added %attr macros in %files (allow build package from non root account),
+- added %attr macros in %files (allows build package from non root account),
 
 * Mon Jul 14 1997 Manoj Kasichainula <manojk@io.com>
   [4.7-1]
