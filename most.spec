@@ -2,7 +2,7 @@ Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
 Version:	4.9.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text
