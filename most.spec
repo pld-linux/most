@@ -28,7 +28,7 @@ dekompresj±c tak¿e pliki przed rzpoczêciem przegl±dania.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 automake -a -c || :
 %configure \
 	--disable-warnings
