@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
+# Source0-md5:	97b32c74dd32ee259b2b4abb540d32b2
 URL:		http://space.mit.edu/~davis/most.html
 BuildRequires:	autoconf
 BuildRequires:	automake
