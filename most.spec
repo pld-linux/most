@@ -2,7 +2,7 @@ Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
 Version:	4.9.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
@@ -45,7 +45,7 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1,%{_datadir}
 
 %{__make} install \
 	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
-	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
+	MAN_DIR=$RPM_BUILD_ROOT%{_mandir} \
 	DOC_DIR=$RPM_BUILD_ROOT%{_defaultdocdir}/%{name}-%{version}
 
 install lesskeys.rc $RPM_BUILD_ROOT%{_sysconfdir}/most.conf
@@ -58,4 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README *.rc *.txt
 %config %{_sysconfdir}/most.conf
 %attr(755,root,root) %{_bindir}/most
-%{_mandir}/man1/*
+%{_mandir}/man1/*.1*
