@@ -22,7 +22,9 @@ przed rzpoczêciem przegl±dania.
 %setup -q -n %{name}
 
 %build
-LDFLAGS=-s CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=/usr
+LDFLAGS="-s" CFLAGS="$RPM_OPT_FLAGS" \
+./configure %{_target} \
+	--prefix=/usr
 make
 
 %install
