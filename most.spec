@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *gz
 %config /etc/most.conf
-%attr(755, root, root) %{_bindir}/most
+%attr(755,root,root) %{_bindir}/most
 %{_mandir}/man1/*
 
 %changelog
