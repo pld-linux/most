@@ -3,13 +3,14 @@ Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
 Version:	4.10.2
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
 # Source0-md5:	99a24b6989ac81f436791b957b2e171a
 URL:		http://www.jedsoft.org/most/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	perl-base
 BuildRequires:	slang-devel >= 1.3.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -56,6 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README *.rc *.txt
-%config %{_sysconfdir}/most.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/most.conf
 %attr(755,root,root) %{_bindir}/most
 %{_mandir}/man1/*.1*
