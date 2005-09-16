@@ -2,7 +2,7 @@ Summary:	SLang based pager
 Summary(pl):	Bazuj±cy na SLang'u pager
 Name:		most
 Version:	4.10.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
