@@ -19,14 +19,14 @@ Most is a pager (like less & more). Allows, amongst other, the viewing
 of multiple files and on-the-fly uncompressing.
 
 %description -l pl
-Most jest pagerem (jak less czy more). Umo¿liwia tak jak inne
-programy tego typu przegl±danie wielu plików jednocze¶nie i
-dekompresuj±c tak¿e pliki przed rozpoczêciem przegl±dania.
+Most jest pagerem (jak less czy more). Umo¿liwia tak jak inne programy
+tego typu przegl±danie wielu plików jednocze¶nie i dekompresuj±c tak¿e
+pliki przed rozpoczêciem przegl±dania.
 
 %prep
 %setup -q
 
-%{__perl} -pi -e 's@/usr/lib@/usr/%{_lib}@' autoconf/aclocal.m4
+%{__perl} -pi -e 's@%{_prefix}/lib@%{_prefix}/%{_lib}@' autoconf/aclocal.m4
 
 %build
 cp -f /usr/share/automake/config.* autoconf
@@ -47,7 +47,7 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1,%{_datadir}
 %{__make} install \
 	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir} \
-	DOC_DIR=$RPM_BUILD_ROOT%{_defaultdocdir}/%{name}-%{version}
+	DOC_DIR=$RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 install lesskeys.rc $RPM_BUILD_ROOT%{_sysconfdir}/most.conf
 
