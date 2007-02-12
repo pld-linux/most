@@ -1,5 +1,5 @@
 Summary:	SLang based pager
-Summary(pl):	Bazuj±cy na SLang'u pager
+Summary(pl.UTF-8):   BazujÄ…cy na SLang'u pager
 Name:		most
 Version:	4.10.2
 Release:	2
@@ -18,10 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Most is a pager (like less & more). Allows, amongst other, the viewing
 of multiple files and on-the-fly uncompressing.
 
-%description -l pl
-Most jest pagerem (jak less czy more). Umo¿liwia tak jak inne programy
-tego typu przegl±danie wielu plików jednocze¶nie i dekompresuj±c tak¿e
-pliki przed rozpoczêciem przegl±dania.
+%description -l pl.UTF-8
+Most jest pagerem (jak less czy more). UmoÅ¼liwia tak jak inne programy
+tego typu przeglÄ…danie wielu plikÃ³w jednoczeÅ›nie i dekompresujÄ…c takÅ¼e
+pliki przed rozpoczÄ™ciem przeglÄ…dania.
 
 %prep
 %setup -q
