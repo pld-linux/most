@@ -1,5 +1,5 @@
 Summary:	SLang based pager
-Summary(pl.UTF-8):   Bazujący na SLang'u pager
+Summary(pl.UTF-8):	Bazujący na SLang'u pager
 Name:		most
 Version:	4.10.2
 Release:	2
