@@ -1,12 +1,12 @@
 Summary:	SLang based pager
 Summary(pl.UTF-8):	Bazujący na SLang'u pager
 Name:		most
-Version:	4.10.2
-Release:	3
-License:	GPL v2
+Version:	5.0.0a
+Release:	1
+License:	GPL v2+
 Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
-# Source0-md5:	99a24b6989ac81f436791b957b2e171a
+# Source0-md5:	4c42abfc8d3ace1b0e0062ea021a5917
 URL:		http://www.jedsoft.org/most/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
