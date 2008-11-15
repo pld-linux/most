@@ -1,3 +1,6 @@
+# TODO
+# - AC_CHECK_SIZEOF tests do not work with autoconf > 2.61, so this spec file
+#   does not build on systems with new autotools (titanium and th).
 Summary:	SLang based pager
 Summary(pl.UTF-8):	Bazujący na SLang'u pager
 Name:		most
@@ -8,7 +11,7 @@ Group:		Applications/Text
 Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
 # Source0-md5:	4c42abfc8d3ace1b0e0062ea021a5917
 URL:		http://www.jedsoft.org/most/
-BuildRequires:	autoconf >= 2.50
+BuildRequires:	autoconf = 2.61
 BuildRequires:	automake
 BuildRequires:	perl-base
 BuildRequires:	slang-devel >= 1.3.6
