@@ -1,0 +1,12 @@
+diff -Naur most-5.0.0a.orig/autoconf/configure.ac most-5.0.0a/autoconf/configure.ac
+--- most-5.0.0a.orig/autoconf/configure.ac	2007-09-06 16:42:03.000000000 +0200
++++ most-5.0.0a/autoconf/configure.ac	2008-11-16 03:34:57.000000000 +0100
+@@ -1,5 +1,8 @@
+ dnl -*- sh -*-
+ AC_INIT(src/most.c)
++
++AC_PROG_CC
++
+ JD_INIT
+ JD_ANSI_CC
+ 
