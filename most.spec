@@ -26,15 +26,14 @@ pliki przed rozpoczęciem przeglądania.
 
 %prep
 %setup -q
-
 %patch0 -p1
 
 %{__sed} -i -e 's@%{_prefix}/lib@%{_prefix}/%{_lib}@' autoconf/aclocal.m4
+
+%build
 cp -f /usr/share/automake/config.* autoconf
 cp -f autoconf/configure.ac .
 cp -f autoconf/aclocal.m4 acinclude.m4
-
-%build
 %{__aclocal}
 %{__autoconf}
 %configure \
