@@ -54,7 +54,7 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1,%{_datadir}
 install lesskeys.rc $RPM_BUILD_ROOT%{_sysconfdir}/most.conf
 
 # clean docdir
-%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
