@@ -5,7 +5,7 @@ Version:	5.0.0a
 Release:	2
 License:	GPL v2+
 Group:		Applications/Text
-Source0:	ftp://space.mit.edu/pub/davis/most/%{name}-%{version}.tar.bz2
+Source0:	http://www.jedsoft.org/releases/most/%{name}-%{version}.tar.bz2
 # Source0-md5:	4c42abfc8d3ace1b0e0062ea021a5917
 Patch0:		%{name}-autoconf.patch
 URL:		http://www.jedsoft.org/most/
@@ -64,4 +64,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README *.rc *.txt
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/most.conf
 %attr(755,root,root) %{_bindir}/most
-%{_mandir}/man1/*.1*
+%{_mandir}/man1/most.1*
