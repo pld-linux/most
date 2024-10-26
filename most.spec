@@ -1,12 +1,12 @@
 Summary:	SLang based pager
 Summary(pl.UTF-8):	Pager bazujący na SLangu
 Name:		most
-Version:	5.0.0a
-Release:	2
+Version:	5.2.0
+Release:	1
 License:	GPL v2+
 Group:		Applications/Text
-Source0:	http://www.jedsoft.org/releases/most/%{name}-%{version}.tar.bz2
-# Source0-md5:	4c42abfc8d3ace1b0e0062ea021a5917
+Source0:	http://www.jedsoft.org/releases/most/%{name}-%{version}.tar.gz
+# Source0-md5:	13229d5d271c5058429c890f155adf45
 Patch0:		%{name}-autoconf.patch
 URL:		http://www.jedsoft.org/most/
 BuildRequires:	autoconf >= 2.50
@@ -51,7 +51,7 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1,%{_datadir}
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir} \
 	DOC_DIR=$RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
-install lesskeys.rc $RPM_BUILD_ROOT%{_sysconfdir}/most.conf
+cp -p doc/lesskeys.rc $RPM_BUILD_ROOT%{_sysconfdir}/most.conf
 
 # clean docdir
 %{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README *.rc *.txt
+%doc README changes.txt doc/most-fun.txt
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/most.conf
 %attr(755,root,root) %{_bindir}/most
 %{_mandir}/man1/most.1*
