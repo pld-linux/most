@@ -2,12 +2,13 @@ Summary:	SLang based pager
 Summary(pl.UTF-8):	Pager bazujący na SLangu
 Name:		most
 Version:	5.2.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://www.jedsoft.org/releases/most/%{name}-%{version}.tar.gz
 # Source0-md5:	13229d5d271c5058429c890f155adf45
 Patch0:		%{name}-autoconf.patch
+Patch1:		%{name}-no-strip.patch
 URL:		http://www.jedsoft.org/most/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -27,6 +28,7 @@ pliki przed rozpoczęciem przeglądania.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %{__sed} -i -e 's@%{_prefix}/lib@%{_prefix}/%{_lib}@' autoconf/aclocal.m4
 

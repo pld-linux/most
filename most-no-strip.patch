@@ -1,0 +1,11 @@
+--- most-5.2.0/src/Makefile.in.orig	2022-08-04 17:24:21.000000000 +0200
++++ most-5.2.0/src/Makefile.in	2024-10-26 17:45:22.144414532 +0200
+@@ -89,7 +89,7 @@ installdirs:
+ 	$(MKINSDIR) $(DEST_MANDIR)/man1
+ 	$(MKINSDIR) $(DEST_BINDIR)
+ install: all installdirs
+-	$(INSTALL) -s $(OBJDIR)/most $(DEST_BINDIR)
++	$(INSTALL) $(OBJDIR)/most $(DEST_BINDIR)
+ 	$(INSTALL_DATA) ../doc/most.1 $(DEST_MANDIR)/man1
+ 	@for i in $(DOC_FILES); \
+ 	do \
